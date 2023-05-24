@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image } from 'react-native';
 
 import ImageViewer from './components/ImageViewer';
+import Button from './components/Button';
 
 // We use "require" to reference the image as the asset is a static resource. This means
 // that it comes from a static place, and not the network as if we were extracting the
@@ -15,6 +16,12 @@ export default function App() {
       <View style={styles.imageContainer}>
         <ImageViewer placeholderImageSource={PlaceholderImage} />
       </View>
+
+      <View style={styles.footerContainer}>
+        <Button label={"Choose a photo"}/>
+        <Button label={"Use this photo"}/>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -31,5 +38,9 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     paddingTop: 58,
+  },
+  footerContainer: {
+    flex: 1/3,
+    alignItems: "center",
   },
 });
