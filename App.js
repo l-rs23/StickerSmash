@@ -18,7 +18,7 @@ export default function App() {
       </View>
 
       <View style={styles.footerContainer}>
-        <Button label={"Choose a photo"}/>
+        <Button label={"Choose a photo"} theme={"primary"}/>
         <Button label={"Use this photo"}/>
       </View>
 
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     paddingTop: 58,
   },
   footerContainer: {
-    flex: 1/3,
+    flex: 1 / 3,
     alignItems: "center",
   },
 });
